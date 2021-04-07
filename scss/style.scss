@@ -9,6 +9,7 @@ $color2: rgba(88, 247, 88, 0.959);
 
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    min-width: 1180px;
 }
 
 .wrapper {
@@ -26,13 +27,16 @@ body {
 }
 
 .conteiner {
-    max-width: 1180px;
+    width: 1180px;
     margin: 0 auto; //выравнивание по центру
 }
 .greeting__row {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
+
+
 .greeting__body {
     color: #fff;
 }
@@ -64,14 +68,23 @@ body {
     }
 }
 
-.greeting__image__conteiner {
-    flex: 0 0 33.3%;
-}
+
 
 .greeting__image {
     //  width: 469px;
     //   height: 214px;
-    width: 100%;
+    max-width: 100%;
+    padding-right: 50px;
+}
+
+@media (max-width: 1220px) {
+    .greeting__image {
+        margin-right: 20px;
+    }
+    .columns__row {
+        padding-left: 20px;
+        margin: 0;
+    }
 }
 
 .greeting__ul {
